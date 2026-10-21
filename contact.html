@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Get in touch with Taylor Morgan about a web project, collaboration, or a good question.">
+  <meta name="theme-color" content="#f7f8f2">
+  <title>Contact | Taylor Morgan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Taylor Morgan, home">TM<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu"><span></span><span></span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation"><ul>
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="skills.html">Skills</a></li><li><a href="projects.html">Projects</a></li><li><a class="nav-contact" href="contact.html" aria-current="page">Contact <span aria-hidden="true">↗</span></a></li>
+    </ul></nav>
+  </header>
+  <main id="main-content">
+    <section class="page-hero content-wrap contact-hero" aria-labelledby="page-title">
+      <p class="eyebrow">The beginning of something</p>
+      <h1 id="page-title">Tell me what's<br>on your mind<span class="period">.</span></h1>
+      <p class="page-lede">A project, a question, or a hello. I read every note and usually reply within two working days.</p>
+    </section>
+    <section class="contact-layout content-wrap" aria-label="Contact Taylor Morgan">
+      <div class="contact-details">
+        <p class="eyebrow">Reach out directly</p>
+        <a class="email-link" href="mailto:hello@taylormorgan.dev">hello@taylormorgan.dev <span aria-hidden="true">↗</span></a>
+        <p>Based in Portland, Oregon<br>Available for remote work</p>
+        <div class="contact-hours"><span class="availability-dot" aria-hidden="true"></span><span>Open to select projects</span></div>
+      </div>
+      <form class="contact-form" id="contact-form">
+        <div class="form-field"><label for="name">Your name <span aria-hidden="true">*</span></label><input id="name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="name-hint"><small id="name-hint">At least 2 characters.</small></div>
+        <div class="form-field"><label for="email">Email address <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="120" aria-describedby="email-hint"><small id="email-hint">I'll use this to get back to you.</small></div>
+        <div class="form-field"><label for="subject">What would you like to talk about? <span aria-hidden="true">*</span></label><select id="subject" name="subject" required><option value="" selected disabled>Choose a topic</option><option value="A new project">A new project</option><option value="A collaboration">A collaboration</option><option value="A question">A question</option><option value="Something else">Something else</option></select></div>
+        <div class="form-field"><label for="message">A little more detail <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="5" required minlength="10" maxlength="3000" aria-describedby="message-hint"></textarea><small id="message-hint">At least 10 characters. Please don't include sensitive information.</small></div>
+        <button class="button button-dark submit-button" type="submit">Prepare email <span aria-hidden="true">↗</span></button>
+        <p class="form-note">Your message opens in your email app. This site doesn't store or send form data.</p>
+        <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer content-wrap"><a class="wordmark" href="index.html" aria-label="Taylor Morgan, home">TM<span>.</span></a><p>Thoughtful by design. Built for everyone.</p><p class="copyright">© <span data-year>2025</span> Taylor Morgan</p></footer>
+</body>
+</html>
