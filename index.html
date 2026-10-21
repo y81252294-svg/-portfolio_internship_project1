@@ -6,6 +6,7 @@
   <meta name="description" content="Taylor Morgan is a front-end developer creating clear, accessible digital experiences for people and the web.">
   <meta name="theme-color" content="#f7f8f2">
   <title>Taylor Morgan | Front-end Developer</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -13,9 +14,6 @@
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <a class="wordmark" href="index.html" aria-label="Taylor Morgan, home">TM<span>.</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
-      <span></span><span></span>
-    </button>
     <nav class="site-nav" id="site-nav" aria-label="Main navigation">
       <ul>
         <li><a href="index.html" aria-current="page">Home</a></li>
@@ -25,6 +23,12 @@
         <li><a class="nav-contact" href="contact.html">Contact <span aria-hidden="true">↗</span></a></li>
       </ul>
     </nav>
+    <div class="header-tools">
+      <button class="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false" title="Toggle color theme"><span aria-hidden="true">◐</span> Dark</button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+        <span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <main id="main-content">

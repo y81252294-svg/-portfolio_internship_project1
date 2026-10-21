@@ -1,3 +1,32 @@
+const themeButton = document.querySelector(".theme-toggle");
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+const themeStorageKey = "portfolio-theme";
+const colorSchemePreference = window.matchMedia("(prefers-color-scheme: dark)");
+const savedTheme = localStorage.getItem(themeStorageKey);
+let activeTheme = savedTheme === "light" || savedTheme === "dark"
+  ? savedTheme
+  : colorSchemePreference.matches ? "dark" : "light";
+
+const applyTheme = (theme) => {
+  activeTheme = theme;
+  document.documentElement.dataset.theme = theme;
+  themeButton?.setAttribute("aria-pressed", String(theme === "dark"));
+  if (themeColorMeta) themeColorMeta.content = theme === "dark" ? "#142019" : "#f7f8f2";
+};
+
+applyTheme(activeTheme);
+
+themeButton?.addEventListener("click", () => {
+  applyTheme(activeTheme === "dark" ? "light" : "dark");
+  localStorage.setItem(themeStorageKey, activeTheme);
+});
+
+colorSchemePreference.addEventListener("change", (event) => {
+  if (localStorage.getItem(themeStorageKey) === null) {
+    applyTheme(event.matches ? "dark" : "light");
+  }
+});
+
 const menuButton = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 
@@ -27,7 +56,7 @@ if (menuButton && siteNav) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.matchMedia("(min-width: 761px)").matches) closeMenu();
+    if (window.matchMedia("(min-width: 800px)").matches) closeMenu();
   });
 }
 
